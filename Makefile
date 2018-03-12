@@ -23,3 +23,7 @@ endif
 
 clean:
 	rm -rf out/
+
+run-image:
+	docker build -t etherpad-lite ./
+	docker run -d -p 9001:9001 etherpad-lite
